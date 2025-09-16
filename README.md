@@ -11,3 +11,9 @@ The endpoint is only accessible while connected to the aainflight.com wifi netwo
 - to install dependencies use `npm install`
 - `node fetchinfo.js` will fetch the data once and exit
 - `node fetchinfo-continuous.js` will clear the screen and fetch every few seconds.
+	- in the future, i might consolidate these two scripts and use a cli flag to determine which to use.
+
+## To add more data points
+- find the api endpoint url in the script and paste it into your browser. this will return some json containing everything.
+- in the script, scroll down to the `lines` array. Add a new item to the array. the `data` object holds the returned flight data, so jiust use `data.someKey` to add the value of someKey to the line.
+- run the script again
